@@ -187,13 +187,7 @@ def linkx(message):
     #print(a[link])
     filedown=wget.download(a.get('link'), out=file)
     bot.reply_to(message,'uploading the video sending u wait !!')
-    app=Client(
-    "Pyrogram Bot",
-    bot_token = '6445662081:AAHn8AEGXU6YsBJeDDNpUrGlWtD8ERA5LTI',
-    api_id = 18102551,
-    api_hash = '7c51c14ac28592debd5a45a3fdd376eb',)
-    app.start()
-    app.send_video(mid,filedown) 
+    os.system('telegram-upload --to t.me/leech_mega_channel {filedown}')
 
 
 bot.add_custom_filter(TextMatchFilter())

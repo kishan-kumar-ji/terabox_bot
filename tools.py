@@ -185,10 +185,6 @@ def linkx(message):
     bot.reply_to(message,f'Downloading->{file} \n size -> {siz}')
     mid=message.chat.id
     #print(a[link])
-    filedown=wget.download(a.get('link'), out=file)
-    bot.reply_to(message,'uploading the video sending u wait !!')
-    os.system('telegram-upload --to t.me/leech_mega_channel {filedown}')
-
 
 bot.add_custom_filter(TextMatchFilter())
 bot.infinity_polling()
